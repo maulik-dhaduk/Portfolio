@@ -1,0 +1,37 @@
+{
+  "files": {
+    "main.css": "/Portfolio/static/css/main.6cd5c21e.css",
+    "main.js": "/Portfolio/static/js/main.90a99e0b.js",
+    "static/js/787.fb771931.chunk.js": "/Portfolio/static/js/787.fb771931.chunk.js",
+    "static/media/image3.png": "/Portfolio/static/media/image3.6214f6b15c4540805acf.png",
+    "static/media/image2.png": "/Portfolio/static/media/image2.46e237ae375efdc73888.png",
+    "static/media/image1.png": "/Portfolio/static/media/image1.30521ebe11b304dc099d.png",
+    "static/media/color-sharp.png": "/Portfolio/static/media/color-sharp.bea361cfef80fefc2d1e.png",
+    "static/media/color-sharp2.png": "/Portfolio/static/media/color-sharp2.c87586c6c2f549cb4aa6.png",
+    "static/media/banner-bg.png": "/Portfolio/static/media/banner-bg.cc1273af450504afe755.png",
+    "static/media/header-img.svg": "/Portfolio/static/media/header-img.84bf93eb20488a753440bf83d27db7bb.svg",
+    "static/media/CentraNo2-Bold.ttf": "/Portfolio/static/media/CentraNo2-Bold.2faff7f7d3fc92a2fcd9.ttf",
+    "static/media/CentraNo2-Medium.ttf": "/Portfolio/static/media/CentraNo2-Medium.f94be5b326d78bb32b95.ttf",
+    "static/media/CentraNo2-Book.ttf": "/Portfolio/static/media/CentraNo2-Book.2b143fa4b734a3584043.ttf",
+    "static/media/Resume.pdf": "/Portfolio/static/media/Resume.c1e0a77d3a53fcdcbed1.pdf",
+    "static/media/footer-bg.png": "/Portfolio/static/media/footer-bg.7bd67c0f73571d0acc02.png",
+    "static/media/contact-img.svg": "/Portfolio/static/media/contact-img.87eac2b29352fa01abb2f9510ef6ac7e.svg",
+    "static/media/revicons.eot": "/Portfolio/static/media/revicons.a77de540a38981833f9e.eot",
+    "static/media/revicons.ttf": "/Portfolio/static/media/revicons.57fd05d4ae650374c8de.ttf",
+    "static/media/revicons.woff": "/Portfolio/static/media/revicons.e8746a624ed098489406.woff",
+    "static/media/meter2.svg": "/Portfolio/static/media/meter2.1b8f416eccd1ee162218b8528a1c5cdc.svg",
+    "static/media/meter1.svg": "/Portfolio/static/media/meter1.c4085ff859afbd8488e9da47d4953850.svg",
+    "static/media/meter3.svg": "/Portfolio/static/media/meter3.2201f7e4df22bc4b08180210474f28cc.svg",
+    "static/media/nav-icon2.svg": "/Portfolio/static/media/nav-icon2.2770fda7b0936b00fae55bc74968cbd2.svg",
+    "index.html": "/Portfolio/index.html",
+    "static/media/nav-icon1.svg": "/Portfolio/static/media/nav-icon1.721d5414c26365f117e71d46b6641cb2.svg",
+    "static/media/nav-icon3.svg": "/Portfolio/static/media/nav-icon3.51013344a07c496679158e9a7cf9940d.svg",
+    "main.6cd5c21e.css.map": "/Portfolio/static/css/main.6cd5c21e.css.map",
+    "main.90a99e0b.js.map": "/Portfolio/static/js/main.90a99e0b.js.map",
+    "787.fb771931.chunk.js.map": "/Portfolio/static/js/787.fb771931.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.6cd5c21e.css",
+    "static/js/main.90a99e0b.js"
+  ]
+}
