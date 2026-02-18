@@ -93,15 +93,42 @@ nav.navbar {
 
 .logo {
   color: #B8B8B8;
-  font-size: 1.5rem;
+  /* font-size: 1.5rem; */
 }
 nav.navbar.scrolled {
   padding: 0px 0;
   background-color: #121212;
 }
+/* Remove old fixed width */
 nav.navbar a.navbar-brand {
-    width: 9%;
+    width: auto;
 }
+
+/* Center logo in Navbar */
+.navbar-logo {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  pointer-events: none; /* allows toggle clicks behind logo */
+}
+
+.navbar-logo .logo {
+  margin: 0;
+  font-size: 1.5rem;
+  color: #B8B8B8;
+  pointer-events: auto; /* still clickable if needed */
+}
+
+/* Make sure nav links and toggler are on top layer */
+.navbar .navbar-collapse,
+.navbar .navbar-toggler {
+  position: relative;
+  z-index: 2;
+}
+
 nav.navbar .navbar-nav .nav-link.navbar-link {
   font-weight: 400;
   color: #fff !important;
@@ -152,6 +179,8 @@ span.navbar-text {
 	width: 40%;
 	z-index: 1;
 	transition: 0.3s ease-in-out;
+  filter: brightness(0) invert(1);
+
 }
 .social-icon a:hover img {
 	filter: brightness(0) saturate(100%) invert(0%) sepia(7%) saturate(98%) hue-rotate(346deg) brightness(95%) contrast(86%);
@@ -369,7 +398,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
 	font-weight: 700;
   text-align: center;
 }
-.project p {
+/* .project p {
   color: #B8B8B8;
   font-size: 18px;
   letter-spacing: 0.8px;
@@ -377,7 +406,7 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   margin: 14px auto 30px auto;
   text-align: center;
   width: 56%;
-}
+} */
 .project .nav.nav-pills {
   width: 72%;
   margin: 0 auto;
@@ -650,10 +679,11 @@ nav.navbar .navbar-toggler[aria-expanded="true"] .navbar-toggler-icon {
   /* width: 26%; */
   font-size: 2rem;
 }
-.footer p {
+/* .footer p {
   font-weight: 400;
   font-size: 14px;
   color: #B8B8B8;
   letter-spacing: 0.5px;
   margin-top: 20px;
-}
+} */
+

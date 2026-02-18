@@ -4,26 +4,45 @@ import { Container, Row, Col } from 'react-bootstrap';
 import contactImg from '../assets/img/contact-img.svg';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import { useRef, useState } from 'react';
+import emailjs from "@emailjs/browser";
 
 export const Contact = () => {
-  const { 
-    register, 
-    handleSubmit, 
-    formState: { errors }, 
-    reset 
-  } = useForm();
+ const [form, setForm] = useState({ name: "", email: "", message: "" });
+     const [submitted, setSubmitted] = useState(false);
+     const [sending, setSending] = useState(false);
+     const [error, setError] = useState("");
+     const formRef = useRef(null);
 
-  const onSubmit = async (data) => {
-    try {
-      const response = await axios.post('/api/sendMail', data);
-      if (response.status === 200) {
-        reset();
-        alert('Form submitted successfully');
-      }
-    } catch (error) {
-      console.error('Error submitting form:', error);
-    }
-  };
+     const onChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
+ 
+     const onSubmit = (e) => {
+         e.preventDefault();
+         setError("");
+ 
+         if (!form.name || !form.email || !form.message) {
+             setError("Please fill all fields!");
+             return;
+         }
+ 
+         setSending(true);
+ 
+         emailjs
+             .sendForm(
+                 "service_uafrao9",
+                 "template_484xeci",
+                 formRef.current,
+                 "CuS3BJS8v2s5E_ACe"
+             )
+             .then(() => {
+                 setSubmitted(true);
+                 setForm({ name: "", email: "", message: "" });
+ 
+                 setTimeout(() => setSubmitted(false), 3000);
+             })
+             .catch(() => setError("Failed to send, try again"))
+             .finally(() => setSending(false));
+     }
 
   return (
     <section className="contact" id="connect">
@@ -41,63 +60,47 @@ export const Contact = () => {
               {({ isVisible }) =>
                 <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                   <h2>Get In Touch</h2>
-                  <form onSubmit={handleSubmit(onSubmit)}>
-                    <Row>
-                      <Col size={12} sm={6} className="px-1">
-                        <input 
-                          type="text" 
-                          placeholder="First Name" 
-                          {...register('firstName', { required: 'Please enter your first name' })} 
-                        />
-                        {errors.firstName && <p className="danger">{errors.firstName.message}</p>}
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input 
-                          type="text" 
-                          placeholder="Last Name" 
-                          {...register('lastName', { required: 'Please enter your last name' })} 
-                        />
-                        {errors.lastName && <p className="danger">{errors.lastName.message}</p>}
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input 
-                          type="email" 
-                          placeholder="Email Address" 
-                          {...register('email', {
-                            required: 'Please enter your email',
-                            pattern: {
-                              value: /\S+@\S+\.\S+/,
-                              message: 'Please enter a valid email address',
-                            },
-                          })}
-                        />
-                        {errors.email && <p className="danger">{errors.email.message}</p>}
-                      </Col>
-                      <Col size={12} sm={6} className="px-1">
-                        <input 
-                          type="tel" 
-                          placeholder="Phone No." 
-                          {...register('phone', {
-                            required: 'Please enter your phone number',
-                            pattern: {
-                              value: /^\d+$/,
-                              message: 'Please enter a valid phone number',
-                            },
-                          })}
-                        />
-                        {errors.phone && <p className="danger">{errors.phone.message}</p>}
-                      </Col>
-                      <Col size={12} className="px-1">
-                        <textarea 
-                          rows="6" 
-                          placeholder="Message" 
-                          {...register('message', { required: 'Please enter your message' })} 
-                        ></textarea>
-                        {errors.message && <p className="danger">{errors.message.message}</p>}
-                        <button type="submit"><span>Submit</span></button>
-                      </Col>
-                    </Row>
-                  </form>
+                  <form action="" ref={formRef} onSubmit={onSubmit}>
+                                                <div className="position-relative mb-4">
+                                                    <i className="bi bi-person position-absolute  fs-4" style={{
+                                                        top: "50%",
+                                                        left: "12px",
+                                                        transform: "translateY(-50%)",
+                                                        color: "#9ca3af"
+                                                    }}
+                                                    ></i>
+                                                    <input type="text" name="name" value={form.name} onChange={onChange} placeholder="Your Name" className="form-control  ps-5 py-3  white-placeholder  text-white border-0 rounded-3xl  " style={{ background: "linear-gradient(15deg, #1e293b, #0f172a)", maxWidth: "550px" }} required />
+                                                </div>
+
+
+                                                <div className="position-relative mb-4">
+                                                    <i className="bi bi-envelope position-absolute  fs-4" style={{
+                                                        top: "50%",
+                                                        left: "12px",
+                                                        transform: "translateY(-50%)",
+                                                        color: "#9ca3af"
+                                                    }}
+                                                    ></i>
+                                                    <input type="email"
+                                                        name="email"
+                                                        value={form.email}
+                                                        onChange={onChange} placeholder="Your Email" className="form-control ps-5 py-3 white-placeholder text-white border-0 rounded-3xl  " style={{ background: "linear-gradient(15deg, #1e293b, #0f172a)", maxWidth: "550px" }} required />
+                                                </div>
+
+                                                <div className="position-relative mb-4">
+                                                    <i className="bi bi-chat-left position-absolute  fs-4 " style={{
+                                                        top: "20%",
+                                                        left: "12px",
+                                                        transform: "translateY(-50%)",
+                                                        color: "#9ca3af"
+                                                    }}
+                                                    ></i>
+                                                    <textarea name="message"
+                                                        value={form.message}
+                                                        onChange={onChange} placeholder="Your Message" className="form-control ps-5 py-3 white-placeholder text-white border-0 rounded-3xl  h-100 " rows="5" style={{ background: "linear-gradient(135deg, #1e293b, #0f172a)", maxWidth: "550px" }} required></textarea>
+                                                </div>
+                                                <button type="submit" disabled={sending}><span>Submit</span></button>
+                                            </form>
                 </div>}
             </TrackVisibility>
           </Col>

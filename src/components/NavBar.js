@@ -14,9 +14,9 @@ export const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [scrolled, setScrolled] = useState(false);
 
-  const facebook = "https://www.facebook.com/profile.php?id=100072033686874&mibextid=ZbWKwL";
-  const linkedin = "https://www.linkedin.com/in/piratecoderz";
-  const instagram = "https://instagram.com/numliancoder";
+  const email = "mailto:dhadukmaulik2002@gmail.com";
+  const linkedin = "https://www.linkedin.com/in/dhaduk-maulik-80592a22a/";
+  const github = "https://github.com/maulik-dhaduk/";
 
   useEffect(() => {
     const onScroll = () => {
@@ -40,9 +40,9 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/">
+          <Navbar.Brand href="/" className="">
             {/* <img src={logo} alt="Logo" /> */}
-            <p className="logo">PirateCoderz</p>
+            <p className="logo m">Maulik Dhaduk</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
@@ -55,9 +55,9 @@ export const NavBar = () => {
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
-                <a href={linkedin}><img src={navIcon1} alt="" /></a>
-                <a href={facebook}><img src={navIcon2} alt="" /></a>
-                <a href={instagram}><img src={navIcon3} alt="" /></a>
+                <a href={linkedin} target="_blank"><img src={navIcon1} alt="" /></a>
+                <a href={github} target="_blank"><img src={navIcon2} alt="" /></a>
+                <a href={email} ><img src={navIcon3} alt="" /></a>
               </div>
               <HashLink to='#connect'>
                 <button className="vvd"><span>Let’s Connect</span></button>

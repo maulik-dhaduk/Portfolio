@@ -3,70 +3,58 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-// import arrow1 from "../assets/img/arrow1.svg";
-// import arrow2 from "../assets/img/arrow2.svg";
-import colorSharp from "../assets/img/color-sharp.png"
+import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
   const responsive = {
-    superLargeDesktop: {
-      // the naming can be any, depends on you.
-      breakpoint: { max: 4000, min: 3000 },
-      items: 5
-    },
-    desktop: {
-      breakpoint: { max: 3000, min: 1024 },
-      items: 3
-    },
-    tablet: {
-      breakpoint: { max: 1024, min: 464 },
-      items: 2
-    },
-    mobile: {
-      breakpoint: { max: 464, min: 0 },
-      items: 1
-    }
+    superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 5 },
+    desktop: { breakpoint: { max: 3000, min: 1024 }, items: 3 },
+    tablet: { breakpoint: { max: 1024, min: 464 }, items: 2 },
+    mobile: { breakpoint: { max: 464, min: 0 }, items: 1 }
   };
 
   return (
     <section className="skill" id="skills">
-        <div className="container">
-            <div className="row">
-                <div className="col-12">
-                    <div className="skill-bx wow zoomIn">
-                        <h2>Skills</h2>
-                        <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p>
-                        <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
-                            <div className="item">
-                                <img src={meter1} alt="Web Development" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Brand Identity" />
-                                <h5>Brand Identity</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter3} alt="Logo Design" />
-                                <h5>Logo Design</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter1} alt="Web Development" />
-                                <h5>Web Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="React App Development" />
-                                <h5>React App Development</h5>
-                            </div>
-                            <div className="item">
-                                <img src={meter2} alt="Wordpress Website" />
-                                <h5>Wordpress Website</h5>
-                            </div>
-                        </Carousel>
-                    </div>
+      <div className="container">
+        <div className="row">
+          <div className="col-12">
+            <div className="skill-bx wow zoomIn">
+              <h2>Skills</h2>
+              <p>
+                I specialize in backend web development, building scalable and efficient applications using Node.js, Express.js, Magento 2, and MongoDB.  
+                Experienced in PHP, JavaScript, and database management, I focus on clean architecture, code optimization, and delivering reliable backend solutions.
+              </p>
+              <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
+                <div className="item">
+                  <img src={meter1} alt="Node.js Development" />
+                  <h5>Node.js Development</h5>
                 </div>
+                <div className="item">
+                  <img src={meter2} alt="Express.js APIs" />
+                  <h5>Express.js APIs</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="Magento 2 Backend" />
+                  <h5>Magento 2 Backend</h5>
+                </div>
+                <div className="item">
+                  <img src={meter1} alt="MongoDB & Mongoose" />
+                  <h5>MongoDB & Mongoose</h5>
+                </div>
+                <div className="item">
+                  <img src={meter2} alt="PHP Backend" />
+                  <h5>PHP Backend</h5>
+                </div>
+                <div className="item">
+                  <img src={meter3} alt="JavaScript & Node.js" />
+                  <h5>JavaScript & Node.js</h5>
+                </div>
+              </Carousel>
             </div>
+          </div>
         </div>
-        <img className="background-image-left" src={colorSharp} alt="Backgroupnd Banner" />
+      </div>
+      <img className="background-image-left" src={colorSharp} alt="Background Banner" />
     </section>
   )
 }

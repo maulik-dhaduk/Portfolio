@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import resume from "../assets/resume/Resume.pdf"
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -11,7 +12,7 @@ export const Banner = () => {
   const [text, setText] = useState('');
   const [delta, setDelta] = useState(300 - Math.random() * 100);
   const [index, setIndex] = useState(1);
-  const toRotate = [ "Web Developer", "Web Designer", "UI/UX Designer" ];
+  const toRotate = [ "Backend Developer", "Node.js Developer", "Open Source Contributor" ];
   const period = 2000;
 
   useEffect(() => {
@@ -56,9 +57,11 @@ export const Banner = () => {
               {({ isVisible }) =>
               <div className={isVisible ? "animate__animated animate__fadeIn" : ""}>
                 <span className="tagline">Welcome to my Portfolio</span>
-                <h1>{`Hi! I'm Ahmad Raza`}<br /> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Web Developer", "Web Designer", "UI/UX Designer" ]'><span className="wrap">{text}</span></span></h1>
-                  <p>Web development refers to the creating, building, and maintaining of websites. It includes aspects such as web design, web publishing, web programming, and database management. It is the creation of an application that works over the internet i.e. websites. Web Development.</p>
-                  <button onClick={() => console.log('connect')}><a href="https://wa.me/+923049113032" className="wa-btn"> Let’s Connect <ArrowRightCircle size={25} /></a></button>
+                <h1>{`Hi! I'm Maulik Dhaduk`}<br /> <span className="txt-rotate" dataPeriod="1000" data-rotate='[ "Backend Web Developer", "Node.js Developer", "Open Source Contributor" ]'><span className="wrap">{text}</span></span></h1>
+                  <p>I am a Backend Web Developer with 2+ years of experience building scalable applications on Magento 2.  Currently, I specialize in Node.js, Express.js, and MongoDB, and I enjoy optimizing backend systems, integrating APIs, and building reliable solutions. I am passionate about learning new web technologies contributing to open-source projects, and creating efficient, maintainable code.</p>
+                  <a className='btn btn-hover-scale btn-lg text-white px-4' href={resume} download style={{ backgroundColor: "#8b5cf6" }}>
+                          <i className="bi bi-file-earmark-text me-2"></i>Download CV
+                  </a>
               </div>}
             </TrackVisibility>
           </Col>
