@@ -40,9 +40,9 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-          <Navbar.Brand href="/" className="">
+          <Navbar.Brand href="/Portfolio/#" className="">
             {/* <img src={logo} alt="Logo" /> */}
-            <p className="logo m">Maulik Dhaduk</p>
+            <p className="logo m" style={{margin:0}}>Maulik Dhaduk</p>
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav">
             <span className="navbar-toggler-icon"></span>
