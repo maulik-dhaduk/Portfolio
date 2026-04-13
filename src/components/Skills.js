@@ -3,7 +3,7 @@ import meter2 from "../assets/img/meter2.svg";
 import meter3 from "../assets/img/meter3.svg";
 import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
-import colorSharp from "../assets/img/color-sharp.png";
+import colorSharp from "../assets/img/color-sharp.webp";
 
 export const Skills = () => {
   const responsive = {
@@ -26,27 +26,27 @@ export const Skills = () => {
               </p>
               <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                 <div className="item">
-                  <img src={meter1} alt="Node.js Development" />
+                  <img src={meter1} alt="Node.js Development" loading="lazy" decoding="async" />
                   <h5>Node.js Development</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="Express.js APIs" />
+                  <img src={meter2} alt="Express.js APIs" loading="lazy" />
                   <h5>Express.js APIs</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="Magento 2 Backend" />
+                  <img src={meter3} alt="Magento 2 Backend" loading="lazy" />
                   <h5>Magento 2 Backend</h5>
                 </div>
                 <div className="item">
-                  <img src={meter1} alt="MongoDB & Mongoose" />
+                  <img src={meter1} alt="MongoDB & Mongoose" loading="lazy" />
                   <h5>MongoDB & Mongoose</h5>
                 </div>
                 <div className="item">
-                  <img src={meter2} alt="PHP Backend" />
+                  <img src={meter2} alt="PHP Backend" loading="lazy" />
                   <h5>PHP Backend</h5>
                 </div>
                 <div className="item">
-                  <img src={meter3} alt="JavaScript & Node.js" />
+                  <img src={meter3} alt="JavaScript & Node.js" loading="lazy" />
                   <h5>JavaScript & Node.js</h5>
                 </div>
               </Carousel>
@@ -54,7 +54,7 @@ export const Skills = () => {
           </div>
         </div>
       </div>
-      <img className="background-image-left" src={colorSharp} alt="Background Banner" />
+      <img className="background-image-left" src={colorSharp} alt="Background Banner" decoding="async" />
     </section>
   )
 }

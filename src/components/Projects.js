@@ -1,9 +1,9 @@
 import { Container, Row, Col } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import project1 from "../assets/img/image1_compressed.png";
-import project2 from "../assets/img/image2_compressed.png";
-import project3 from "../assets/img/image3_compressed.png";
-import colorSharp2 from "../assets/img/color-sharp2.png";
+import project1 from "../assets/img/image1.webp";
+import project2 from "../assets/img/image2.webp";
+import project3 from "../assets/img/image3.webp";
+import colorSharp2 from "../assets/img/color-sharp2.webp";
 import 'animate.css';
 
 export const Projects = () => {
@@ -35,6 +35,8 @@ export const Projects = () => {
                           src={project1}
                           alt="E-Commerce Project"
                           className="img-fluid rounded-2"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
 
@@ -76,6 +78,8 @@ export const Projects = () => {
                           src={project3}
                           alt="Qarotmen Website"
                           className="img-fluid rounded-2"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
 
@@ -115,6 +119,8 @@ export const Projects = () => {
                           src={project2}
                           alt="Amazon Prime Clone"
                           className="img-fluid rounded-2"
+                          loading="lazy"
+                          decoding="async"
                         />
                       </div>
 
@@ -145,7 +151,7 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background Banner 2" />
+      <img className="background-image-right" src={colorSharp2} alt="Background Banner 2" decoding="async" />
     </section>
   )
 }
