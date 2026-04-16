@@ -50,7 +50,7 @@ export const Projects = () => {
                         </p>
 
                         <a
-                          href="https://shoeshub-store.netlify.app/"
+                          href="https://shoeshub-store-lime.vercel.app/"
                           target="_blank"
                           rel="noreferrer"
                           className="text-decoration-none"
@@ -133,7 +133,7 @@ export const Projects = () => {
                         </p>
 
                         <a
-                          href="https://primevideo-clone-7aaeca.netlify.app/"
+                          href="https://amazon-prime-clone-ten-rho.vercel.app/"
                           target="_blank"
                           rel="noreferrer"
                           className="text-decoration-none"
